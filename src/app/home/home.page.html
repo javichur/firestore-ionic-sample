@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>
+      {{ name }}
+    </ion-label>
+    <ion-label>
+      {{ email }}
+    </ion-label>
+  </ion-item>
+
+  <ion-card *ngFor="let item of films" >
+    <ion-card-header>
+      <ion-card-subtitle>{{ item.year }}</ion-card-subtitle>
+      <ion-card-title>{{ item.title }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{ item.synopsis }}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
